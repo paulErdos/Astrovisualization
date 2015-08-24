@@ -33,14 +33,21 @@ GENERAL PROJECT OUTLINE
 		  data. 
 		* But
 		* If there's an OBVIOUS way to do feature discovery, try it.
-		  But beware the Collatz conjecture. Don't get stuck. 
+		  But remember the mathematicians that wasted careers on the 
+		  Collatz conjecture. Don't get stuck. 
 		* But calculate a bunch of stuff. Joel told me a few things. 
-		* I probably wrote this down.
-		* God this medication is nice. 
+		  It's in my notes somewhere.
+		* At very least do some supervised learning. Like train on known 
+		  relations and have the program determine something like a 
+		  correlation threshold. Then do combinatorial analysis on 
+		  everything measurable and have the program hand to us all 
+		  the linear relationships in term of what we search for. 
+		* But if possible... automatic feature discovery would be 
+		  cool. I wonder if you can know that you've derived everything 
+		  you can from a sufficiently large finite dataset. 
 
 	* Web Data / Halo Catalog Association
-		* Didn't Doug do something with this?
-		* This is definitely where I'm trailing.
+		* Import notes 
 
 	* General Astro
 		* Talk to Joel about special relativity
