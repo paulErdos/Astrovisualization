@@ -7,22 +7,33 @@
 # Now adding a second PBO for 3D
 # Alex Bogert
 
+# Vincent Steffens
+# Cleaning and documenting code
+# Editing interface
+
+# No idea what these are for
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
 from OpenGL.GL.ARB.vertex_buffer_object import *
 
+# For command line arguments and... time.
 import sys, time
+# and numpy
 import numpy as np
+# Definitely not sure what this is about
 import pycuda.driver as cuda_driver
+# or this. Interface with the video card, I think.
 import pycuda.gl as cuda_gl
-
+# Not completely sure what this is about.
 from pyRGBA.cameras.glcamera import GLCamera
 
+# Not sure what these are going to be used for. Should these even be 
+# declared here? Reorganize if necessary.
 window = None     # Number of the glut window.
-rot_enabled = True 
-rot_mag = 0.001
-camera = None
+rot_enabled = True # AND
+rot_mag = 0.001 # LABEL
+camera = None # GOSH
 
 #RAY CASTING values
 brightness = 1.23
@@ -36,26 +47,47 @@ rightButton = False
 
 eyesep = 0.003
 
+# No idea what these are for
 (pbo, pycuda_pbo) = [None]*2
 (rpbo, rpycuda_pbo) = [None]*2
 
 def exit_msg(errmsg):
+    """
+    TO-DO:
+    ------------------------------------------------------------------------
+    
+    1. Un-abbreviate everything so that the code doesn't read like it was 
+       written in the days of 64k memory capacity. 
+
+    """
+
     print "ERROR: "+errmsg+" not specified. Exiting..."
     sys.exit(0)
 
 def handleCommandLineArgs():
+    """
+    ------------------------------------------------------------------------
+    """
     
+    #what are globals? Global variables? What is this one used for?
     global rot_enabled
 
+    #what is this used for? 
     ret_args = []
 
+    #what are we about to do here?
     i = 1
-    
+    # Probably loop through the arguments
+    # Where are these documented?
+    # Why aren't they discussed in a docstring?
+    # Why aren't they part of the interface? 
     while (i < len(sys.argv)):
+
         if (sys.argv[i][0] != '-'):
             print "ERROR: malformed argments"
             sys.exit(0)
         else:
+            # ...what?
             arg = sys.argv[i][1:]
             if (arg.find("=") == -1):
                 val = ""
@@ -65,6 +97,7 @@ def handleCommandLineArgs():
                 flag = arg[:arg.find("=")]
 
         # we now have the flag and value
+        # Yep. Totally lost. Ask Alex about that bit and come back here
         if (flag == "data"):
             if (len(val)):
                 ret_args.append((flag,val))
@@ -84,11 +117,13 @@ def handleCommandLineArgs():
             if (len(val)):
                 ret_args.append((flag,val))
             else:
+                #bins?
                 exit_msg("number of bins")
         elif (flag == "min"):
             if (len(val)):
                 ret_args.append((flag,val))
             else:
+                #value of what?
                 exit_msg("min value")
         elif (flag == "max"):
             if (len(val)):
@@ -96,17 +131,23 @@ def handleCommandLineArgs():
             else:
                 exit_msg("max value")
         else:
+            # y u no just handle it and go on?
             print "ERROR: flag: \"" + flag + "\" not recognized, exiting."
             sys.exit(0)
 
         i += 1
 
+    #Is this necessary? Consider relegating to debug or verbose mode?
     print ret_args
 
+    #Maybe run this on the VLC, redirect output to file, and just grab it and check for errors. 
     return ret_args
 
 def updateTransfer ():
-
+    """
+    ------------------------------------------------------------------------
+    """
+    
     global mi, ma, bins
 
     from yt.mods import ColorTransferFunction
@@ -117,6 +158,10 @@ def updateTransfer ():
 
 #create 2 PBO for stereo scopic rendering
 def create_PBO(w, h):
+    """
+    ------------------------------------------------------------------------
+    """
+    
     global pbo, pycuda_pbo, rpbo, rpycuda_pbo
     num_texels = w*h
     array = np.zeros((num_texels, 3),np.float32)
@@ -134,6 +179,10 @@ def create_PBO(w, h):
     rpycuda_pbo = cuda_gl.RegisteredBuffer(long(rpbo))
 
 def destroy_PBO():
+    """
+    ------------------------------------------------------------------------
+    """
+    
     global pbo, pycuda_pbo, rpbo, rpycuda_pbo
     glBindBuffer(GL_ARRAY_BUFFER, long(pbo))
     glDeleteBuffers(1, long(pbo));
@@ -147,6 +196,10 @@ def destroy_PBO():
 
 #consistent with C initPixelBuffer()
 def create_texture(w,h):
+    """
+    ------------------------------------------------------------------------
+    """
+    
     global output_texture
     output_texture = glGenTextures(1)
     glBindTexture(GL_TEXTURE_2D, output_texture)
@@ -161,11 +214,19 @@ def create_texture(w,h):
 
 #consistent with C initPixelBuffer()
 def destroy_texture():
+    """
+    ------------------------------------------------------------------------
+    """
+    
     global output_texture
     glDeleteTextures(output_texture);
     output_texture = None
 
 def init_gl(w = 512 , h = 512):
+    """
+    ------------------------------------------------------------------------
+    """
+    
     Width, Height = (w, h)
 
     glClearColor(0.1, 0.1, 0.5, 1.0)
@@ -181,6 +242,10 @@ def init_gl(w = 512 , h = 512):
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL)
 
 def resize(Width, Height):
+    """
+    ------------------------------------------------------------------------
+    """
+    
     global current_size
     current_size = Width, Height
     glViewport(0, 0, Width, Height)        # Reset The Current Viewport And Perspective Transformation
@@ -188,8 +253,11 @@ def resize(Width, Height):
     glLoadIdentity()
     gluPerspective(60.0, Width/float(Height), 0.1, 10.0)
 
-
 def do_tick():
+    """
+    ------------------------------------------------------------------------
+    """
+    
     global time_of_last_titleupdate, frame_counter, frames_per_second
     if ((time.clock () * 1000.0) - time_of_last_titleupdate >= 1000.):
         frames_per_second = frame_counter                   # Save The FPS
@@ -199,6 +267,7 @@ def do_tick():
         time_of_last_titleupdate = time.clock () * 1000.0
     frame_counter += 1
 
+#what is this doing here?
 oldMousePos = [ 0, 0 ]
 def mouseButton( button, mode, x, y ):
 	"""Callback function (mouse button pressed or released).
@@ -257,6 +326,10 @@ def mouseMotion( x, y ):
 
 # The function called whenever a key is pressed. Note the use of Python tuples to pass in: (key, x, y)
 def keyPressed(*args):
+    """
+    ------------------------------------------------------------------------
+    """
+    
     global camera, brightness, density_scale, rot_enabled, eyesep, mi, ma, bins, tf_interval, global_min, global_max, rot_mag
     # If escape is pressed, kill everything.
     if args[0] == '\033':
@@ -338,9 +411,17 @@ def keyPressed(*args):
         print "TF max: " + str(ma)
 
 def idle():
+    """
+    ------------------------------------------------------------------------
+    """
+    
     glutPostRedisplay()
 
 def display():
+    """
+    ------------------------------------------------------------------------
+    """
+    
     try:
         #process left eye
         process_image()
@@ -358,6 +439,10 @@ def display():
         _exit(0)
 
 def process(eye = True):
+    """
+    ------------------------------------------------------------------------
+    """
+    
     global camera, pycuda_pbo, rpycuda_pbo, eyesep, rot_mag, density_scale, brightness
     """ Use PyCuda """
     
@@ -382,8 +467,11 @@ def process(eye = True):
         dest_mapping.unmap()
         camera.translateX(-eyesep)
 
-
 def process_image(eye =  True):
+    """
+    ------------------------------------------------------------------------
+    """
+    
     global camera, output_texture, pbo, rpbo
     """ copy image and process using CUDA """
     # run the Cuda kernel
@@ -405,6 +493,10 @@ def process_image(eye =  True):
                  GL_RGB, GL_FLOAT, None)
 
 def display_image(eye = True):
+    """
+    ------------------------------------------------------------------------
+    """
+    
     global camera
     """ render a screen sized quad """
     glDisable(GL_DEPTH_TEST)
@@ -450,9 +542,12 @@ def display_image(eye = True):
     glBindBuffer(GL_PIXEL_PACK_BUFFER, 0)
     glBindBuffer(GL_PIXEL_UNPACK_BUFFER, 0)
 
-
 #note we may need to init cuda_gl here and pass it to camera
 def main():
+    """
+    ------------------------------------------------------------------------
+    """
+    
 
     global bins, ma, mi, tf_interval, global_min, global_max
 
@@ -539,7 +634,12 @@ def main():
 
     glutMainLoop()
 
+#This needs to be reorganized
 def scale_func(v, mi, ma):
+    """
+    ------------------------------------------------------------------------
+    """
+    
     return np.minimum(1.0, (v-mi)/(ma-mi) + 0.0)
 
 # Print message to console, and kick off the main to get it rolling.
