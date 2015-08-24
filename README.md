@@ -4,7 +4,7 @@ Code development for visualization in the lab
 NOTES
 ===========================================================================
 
-* Be sure to consult Suresh when desinging new visualization. Give his 
+* Be sure to consult Suresh when desinging new visualization. Given his 
   expertise, it may be a good idea to consult him frequently when changes 
   to the visualization design become possible. 
 
@@ -22,12 +22,12 @@ GENERAL PROJECT OUTLINE
 			* Minimizable infoboxes with halo catalog data
 			* Toggleable control menu (possibly just in an infoboxlikething)
 
-		Visualization Additions
+		* Visualization Additions
 			* Translucent triaxial ellipsoid
 			* Fundamental components (the 3d axis arrows for the ellipsoid)
 			* Figure out a way to visualize orientation
 
-	Data Analysis
+	* Data Analysis
 		* I still need to clarify what it is I want to do here. I'll 
 		  probably have a better idea once I associate the web and halo
 		  data. 
@@ -38,11 +38,11 @@ GENERAL PROJECT OUTLINE
 		* I probably wrote this down.
 		* God this medication is nice. 
 
-	Web Data / Halo Catalog Association
+	* Web Data / Halo Catalog Association
 		* Didn't Doug do something with this?
 		* This is definitely where I'm trailing.
 
-	General Astro
+	* General Astro
 		* Talk to Joel about special relativity
 		* Review and re-memorize the group axioms
 		* Learn about compactness
