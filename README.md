@@ -64,32 +64,32 @@ TO-DO
    ------------------------------------------------------------------------
 
    Legend:
-   * √: Done as much as possible for now
-   * -: Done as much as is reasonable for now
-   * !: Blocked by question.
-   * ~: In progress
-   * *: Unstarted
+   * √ <--> Done as much as possible for now
+   * - <--> Done as much as is reasonable for now
+   * ! <--> Blocked by question.
+   * ~ <--> In progress
+   * * <--> Unstarted
 
-   √ Preamble
-   - Exit Message 
-   ! Handle Command Line Args
-   * Update Transfer
-   * Create PBO (bundle these into an object and make these methods?)
-   * Destroy PBO
-   * Create texture
-   * Destroy texture (maybe same here)
-   * Init GL
-   * Resize
-   * Do Tick
-   * Mouse Button
-   * Mouse Motion
-   * Key Pressed
-   * Idle (can this be eliminated? it's one line)
-   * Display
-   * Process
-   * Process Image
-   * Display Image (maybe an image object)
-   * Scale Func
+   * √ Preamble
+   * - Exit Message 
+   * ! Handle Command Line Args
+   * * Update Transfer
+   * * Create PBO (bundle these into an object and make these methods?)
+   * * Destroy PBO
+   * * Create texture
+   * * Destroy texture (maybe same here)
+   * * Init GL
+   * * Resize
+   * * Do Tick
+   * * Mouse Button
+   * * Mouse Motion
+   * * Key Pressed
+   * * Idle (can this be eliminated? it's one line)
+   * * Display
+   * * Process
+   * * Process Image
+   * * Display Image (maybe an image object)
+   * * Scale Func
 
    List of things that it's probably worthwhile to keep track of
    ------------------------------------------------------------------------
