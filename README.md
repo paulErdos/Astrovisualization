@@ -14,9 +14,9 @@ NOTES
 GENERAL PROJECT OUTLINE
 ===========================================================================
 
-Project
-	Visualization
-		Interface Upgrades
+* Project
+	* Visualization
+		* Interface Upgrades
 			* Make a click halt that rotation or kill it completely
 			* Freely movable camera
 			* Minimizable infoboxes with halo catalog data
@@ -113,7 +113,7 @@ TO-DO
         - What is going on here? 
         - What's the equals sign for?
         - What is the purpose of setting 'flag' and 'val' here?
-        
+
     	--> Question is blocking: 
     	    * handleCommandLineArgs()
 
