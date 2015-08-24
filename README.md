@@ -68,7 +68,7 @@ TO-DO
    * - <--> Done as much as is reasonable for now
    * ! <--> Blocked by question.
    * ~ <--> In progress
-   * * <--> Unstarted
+   * * <--> Unblocked, Unstarted
 
    List:
    * √ Preamble
@@ -95,27 +95,26 @@ TO-DO
    List of things that it's probably worthwhile to keep track of
    ------------------------------------------------------------------------
  
-   a. Add docstrings to everything.
-   b. Make the code legible to non-authors
-   c. Un-abbreviate everything so that the code doesn't read like it was 
-       written in the days of 64k memory capacity. 
-   d. Remember that spaces, not tabs. Perhaps convert for dev convenience 
-      then switch back at the end? I feel like this could cause disaster.
-   e. Clean up line width
-   f. Learn what a callback function is
-   g. Consider sending iteratively skimming the document in finer and 
-      finer detail as a method of absorhing everything there is to 
-      absorb greedily by easiest. Then proofread and send to Alex with 
-      any lingering questions.
-   h. Learn about globals
+   * Add docstrings to everything.
+   * Make the code legible to non-authors
+   * Un-abbreviate everything so that the code doesn't read like it was 
+       written in the days of 64k memory capacity
+   * Remember that spaces, not tabs. Perhaps convert for dev convenience 
+      then switch back at the end? I feel like this could cause disaster
+   * Clean up line width
+   * Learn what a callback function is
+   * Consider iteratively skimming the document in finer and 
+      finer detail as a method of absorbing everything there is to 
+      absorb greedily by easiest, then proofread and send to Alex with 
+      any lingering questions
+   * Learn about globals
    
-
-   y. Track Interface Elements:
-      * all options must start with a -
+   * Track Interface Elements:
+      * all options must start with a '-'
       * Perhaps add a debug or verbose mode, and suppress more than 
         minimum output. 
    
-   z. Track questions for Alex and blocked sections:
+   * Track questions for Alex and blocked sections:
       * in handleCommandLineArgs(), first while loop, first else 
         statement: 
         - What is going on here? 
