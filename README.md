@@ -70,6 +70,7 @@ TO-DO
    * ~ <--> In progress
    * * <--> Unstarted
 
+   List:
    * √ Preamble
    * - Exit Message 
    * ! Handle Command Line Args
