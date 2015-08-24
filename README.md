@@ -108,12 +108,10 @@ TO-DO
       absorb greedily by easiest, then proofread and send to Alex with 
       any lingering questions
    * Learn about globals
-   
    * Track Interface Elements:
       * all options must start with a '-'
       * Perhaps add a debug or verbose mode, and suppress more than 
         minimum output. 
-   
    * Track questions for Alex and blocked sections:
       * in handleCommandLineArgs(), first while loop, first else 
         statement: 
