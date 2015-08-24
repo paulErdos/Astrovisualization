@@ -64,11 +64,11 @@ TO-DO
    ------------------------------------------------------------------------
 
    Legend:
-   √: Done as much as possible for now
-   -: Done as much as is reasonable for now
-   !: Blocked by question.
-   ~: In progress
-   *: Unstarted
+   * √: Done as much as possible for now
+   * -: Done as much as is reasonable for now
+   * !: Blocked by question.
+   * ~: In progress
+   * *: Unstarted
 
    √ Preamble
    - Exit Message 
