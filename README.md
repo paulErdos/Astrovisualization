@@ -1,6 +1,12 @@
 # Astrovisualization
 Code development for visualization in the lab
 
+CURRENTLY
+===========================================================================
+
+* Getting Git set up on VLC
+
+
 NOTES
 ===========================================================================
 
@@ -9,6 +15,41 @@ NOTES
   to the visualization design become possible. 
 
 * Consult Manfred for machine learning and algorithm design help. 
+
+
+Agile Development Workspace
+===========================================================================
+
+Settings
+---------------------------------------------------------------------------
+
+Sprint Length: 1wk.
+
+
+Sprint Log
+---------------------------------------------------------------------------
+
+Sprint 0:
+* Figure out what the general picture of the entire project looks like
+* Keep log of changes that need to be made (below)
+* Get all of my visualization development work on GitHub and synced with 
+  all relevant comps.
+
+User Stories:
+* Get from Christoph
+* Get from Joel
+* Get from Aldo
+* Others? 
+
+Product Backlog:
+* Fill backlog
+* Get user stories
+
+
+Backlog (necessarily unsorted)
+---------------------------------------------------------------------------
+
+* 
 
 
 GENERAL PROJECT OUTLINE
@@ -123,3 +164,44 @@ TO-DO
     	    * handleCommandLineArgs()
 
 
+Notes Accumulated While Suffering Through The UI
+===========================================================================
+
+This is an unsorted list of stuff I found while playing with the program.
+
+
+The VisLab Computer
+---------------------------------------------------------------------------
+
+* Need libstdc++.so.6(GLIBCXX_3.4.15)(64Bbit)
+* Need to get a mechanical keyboard 
+* Need to get a mouse that doen't accumulate frictioney crud
+* Might be good to get a book on general CentOS
+* Need to install Flash to use GitHub --> see item 1
+* Need to install Chrome to escape from FireFox --> see item 1
+* I need to be using CentOS at home to bring myself up to speed on it. 
+
+
+General Program Use
+---------------------------------------------------------------------------
+
+* There needs to be a quit option in the GUI
+
+
+Navigation
+---------------------------------------------------------------------------
+
+* Autorotation absolutely must die, incl. 'r', 'R' to speed and slow.
+  --> The entire feature must be removed.
+
+* Mouse click-drag cube rotation is completely nonfunctional
+  --> The entire feature must be removed. 
+  --> Replace with mouse for direction and wasd/dpad for mov't
+  --> Perhaps the delta_s for mov't could be adjusted
+
+* How do you zoom?
+  --> Doesn't matter. Feature will be eliminated. 
+
+* This is probably good for now. Other authors will give other current 
+  UI specs, and implementing flying around will make a good sprint 1 
+  task. Other ideas should be gathered in the backlog. 
