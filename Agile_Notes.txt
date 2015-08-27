@@ -1,0 +1,33 @@
+Agile Development Workspace
+===========================================================================
+
+Settings
+---------------------------------------------------------------------------
+
+Sprint Length: 1wk.
+
+
+Sprint Log
+---------------------------------------------------------------------------
+
+Sprint 0:
+* Figure out what the general picture of the entire project looks like
+* Keep log of changes that need to be made (below)
+* Get all of my visualization development work on GitHub and synced with 
+  all relevant comps.
+
+User Stories:
+* Get from Christoph
+* Get from Joel
+* Get from Aldo
+* Others? 
+
+Product Backlog:
+* Fill backlog
+* Get user stories
+
+
+Backlog (necessarily unsorted)
+---------------------------------------------------------------------------
+
+* 
