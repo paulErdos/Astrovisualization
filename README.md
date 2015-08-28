@@ -4,7 +4,30 @@ Code development for visualization in the lab
 PENDING MATTERS
 ===========================================================================
 
+* Extract visualization-specific notes from this and reorganize into 
+  Visualization/
+* This document should contain an overview of the general project, and 
+  should refer to other documentation inside subfolders. 
+  --> What should these all be called? Readme.md? <subject>_readme.txt?
+
+
+Visualization:
 * Waiting on documentation, but don't stall waiting for it. 
+
+Web Data:
+* Transcribe notes into documentation
+
+Halo Catalog:
+* Transcribe notes into documentation
+
+Particle Data:
+* Transcribe notes into documentation
+
+Combinatorial Feature Linearizer:
+* Get general sketch into documentation
+* Then set on back burner. 
+* This will be useful after we have analyzed the web data, so only work on 
+  this to clear your head. 
 
 
 NOTES
