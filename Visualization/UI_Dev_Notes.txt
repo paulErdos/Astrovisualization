@@ -1,0 +1,43 @@
+UI Development Notes
+===========================================================================
+
+This is an unsorted list of stuff I found while playing with the program.
+
+
+The VisLab Computer
+---------------------------------------------------------------------------
+
+* Need libstdc++.so.6(GLIBCXX_3.4.15)(64Bbit)
+* Need to get a mechanical keyboard 
+* Need to get a mouse that doen't accumulate frictioney crud
+* Might be good to get a book on general CentOS
+* Need to install Flash to use GitHub --> see item 1
+* Need to install Chrome to escape from FireFox --> see item 1
+* I need to be using CentOS at home to bring myself up to speed on it. 
+
+
+General Program Use
+---------------------------------------------------------------------------
+
+* There needs to be a quit option in the GUI
+* Gui controls? Sliders, etc? A small UI element could open and close a 
+  panel
+
+
+Navigation
+---------------------------------------------------------------------------
+
+* Autorotation absolutely must die, incl. 'r', 'R' to speed and slow.
+  --> The entire feature must be removed.
+
+* Mouse click-drag cube rotation is completely nonfunctional
+  --> The entire feature must be removed. 
+  --> Replace with mouse for direction and wasd/dpad for mov't
+  --> Perhaps the delta_s for mov't could be adjusted
+
+* How do you zoom?
+  --> Doesn't matter. Feature will be eliminated. 
+
+* This is probably good for now. Other authors will give other current 
+  UI specs, and implementing flying around will make a good sprint 1 
+  task. Other ideas should be gathered in the backlog. 
