@@ -29,6 +29,13 @@ Combinatorial Feature Linearizer:
 * This will be useful after we have analyzed the web data, so only work on 
   this to clear your head. 
 
+Streaming:
+* Might be nice to resurrect this
+* DEFINITELY must have that one file commented. Else re-do streaming in 
+  Node from the bottom up. Maybe Carl could give a Nerd Club talk about 
+  websocket streaming in node lol
+* Give this zero priority for now. 
+
 
 NOTES
 ===========================================================================
